@@ -6,7 +6,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
-import router from './router.jsx';
+import router from './Routes/router.jsx';
 
 
 createRoot(document.getElementById('root')).render(
