@@ -19,7 +19,7 @@ const MarriageReview = () => {
          <p className="text-center">At Love Line, we cherish the beautiful journeys of love we've nurtured. Discover how we've helped <br /> countless couples find their perfect match and start their happily ever after</p>
         <div className='flex p-10'>
             <div className='grid lg:grid-cols-3 gap-4'>
-                {data && data.map(review => (
+                {data && data?.slice(0,6)?.map(review => (
                     <ReviewCard key={review._id} review={review} />
                 ))}
             </div>

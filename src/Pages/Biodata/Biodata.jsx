@@ -45,12 +45,12 @@ const Biodata = () => {
                 <FilterBiodata filters={filters} onFilterChange={handleFilterChange} onApply={applyFilters} />
             </div>
             <div className='md:w-2/3'>
-                <h2 className='text-2xl font-bold text-red-600 font-serif mb-4 text-center'>All Biodatas</h2>
+                <h2 className='text-2xl font-bold text-green-600 font-serif mb-4 text-center'>All Biodatas</h2>
                 {isLoading ? (
                     <p>Loading...</p>
                 ) : (
                     <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
-                        {biodatas.map(biodata => (
+                        {biodatas?.map(biodata => (
                             <CardForm key={biodata._id} biodata={biodata} />
                         ))}
                     </div>

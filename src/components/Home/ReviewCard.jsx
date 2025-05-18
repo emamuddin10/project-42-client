@@ -13,7 +13,7 @@ const ReviewCard = ({ review }) => {
         
         <div className="space-y-4">
             <div className="space-y-2">
-                <img src={review.image} alt="" className="block object-cover object-center w-full rounded-md h-72 dark:bg-gray-500" />
+                <img src={review.image} alt="" className="block object-cover object-center w-full border border-gray-300 rounded-md h-72 dark:bg-gray-500" />
               
             </div>
             <div className="space-y-2">

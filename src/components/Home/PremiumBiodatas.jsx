@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 const PremiumBiodatas = () => {
   const [premiumBiodatas, setPremiumBiodatas] = useState([]);
+  console.log(premiumBiodatas)
   const [sortOrder, setSortOrder] = useState('asc'); // State to keep track of sorting order
   const navigate = useNavigate();
 

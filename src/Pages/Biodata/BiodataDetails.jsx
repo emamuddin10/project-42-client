@@ -55,21 +55,6 @@ const BiodataDetail = () => {
     const url = `/checkout/${biodata.biodataId}?name=${encodeURIComponent(biodata.name)}&number=${encodeURIComponent(biodata.number)}`;
     navigate(url);
   };
-  
-
-  // const handleRequestContact = () => {
-  //   navigate( `/checkout/${biodataId}?name=${encodeURIComponent(name)}&number=${encodeURIComponent(number)}`);
-  // };
-
-  // const handleRequestContact = () => {
-  //   navigate(`/checkout/${biodata.biodataId}`, {
-  //     state: {
-  //       name: biodata.name,
-  //       number: biodata.number
-  //     }
-  //   });
-  // };
-  
 
   const similarBiodata = allBiodata.filter(b => b._id !== id && b.type === biodata.type).slice(0, 3);
 
