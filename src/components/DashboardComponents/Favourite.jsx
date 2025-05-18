@@ -9,7 +9,7 @@ const Favourite = () => {
   const queryClient = useQueryClient();
 
   const fetchFavourites = async () => {
-    const { data } = await axios.get(`https://matrimony-server-sable.vercel.app/favourites/${user.email}`);
+    const { data } = await axios.get(`http://localhost:5000/favourites/${user.email}`);
     return data;
   };
 
@@ -31,7 +31,7 @@ const Favourite = () => {
       confirmButtonText: "Yes, delete it!"
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://matrimony-server-sable.vercel.app/favourite/${_id}`, {
+        fetch(`http://localhost:5000/favourite/${_id}`, {
           method: 'DELETE'
         })
           .then(res => res.json())
@@ -181,7 +181,7 @@ export default Favourite;
 //   const [fav, setFev] = useState();
 
 //   const fetchFavourites = async () => {
-//     const { data } = await axios.get(`https://matrimony-server-sable.vercel.app/favourites/${user.email}`);
+//     const { data } = await axios.get(`http://localhost:5000/favourites/${user.email}`);
 //     return data;
 //   };
 
@@ -205,7 +205,7 @@ export default Favourite;
 //         if (result.isConfirmed) {
 
 
-//             fetch(`https://matrimony-server-sable.vercel.app/favourite/${_id}`, {
+//             fetch(`http://localhost:5000/favourite/${_id}`, {
 //                 method: 'DELETE'
 //             })
 //             .then(res => res.json())

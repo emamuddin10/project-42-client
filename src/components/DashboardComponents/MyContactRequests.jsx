@@ -9,7 +9,7 @@ const MyContactRequest = () => {
   const queryClient = useQueryClient();
 
   const fetchContactRequest = async () => {
-    const { data } = await axios.get(`https://matrimony-server-sable.vercel.app/contact-requests-info/${user.email}`);
+    const { data } = await axios.get(`http://localhost:5000/contact-requests-info/${user.email}`);
     return data;
   };
 
@@ -29,7 +29,7 @@ const MyContactRequest = () => {
       confirmButtonText: "Yes, delete it!"
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`https://matrimony-server-sable.vercel.app/contact-requests-info/${id}`)
+        axios.delete(`http://localhost:5000/contact-requests-info/${id}`)
           .then(() => {
             Swal.fire({
               title: "Deleted!",

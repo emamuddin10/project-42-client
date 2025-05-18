@@ -1,8 +1,9 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../providers/AuthProvider";
+// import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
-import SocialLogin from "../../Component/SocialLogin/SocialLogin";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import SocialLogin from "../../components/SocialLogin/SocialLogin";
 
 
 const Login = () => {
@@ -69,7 +70,7 @@ const Login = () => {
               {/* <div className="flex items-center justify-between">
                 <button
                   type="button"
-                  className="w-full px-4 py-2 font-semibold text-white bg-red-500 rounded-lg hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2"
+                  className="w-full px-4 py-2 font-semibold text-white bg-red-500 rounded-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2"
                 >
                   Login with Google
                 </button>

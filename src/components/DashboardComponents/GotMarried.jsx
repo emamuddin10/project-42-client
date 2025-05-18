@@ -46,7 +46,7 @@ const GotMarried = () => {
     console.log(newMarriage);
 
     // send data to server
-    fetch('https://matrimony-server-sable.vercel.app/marriage', {
+    fetch('http://localhost:5000/marriage', {
         method: 'POST',
         headers: {
             'content-type' : 'application/json'

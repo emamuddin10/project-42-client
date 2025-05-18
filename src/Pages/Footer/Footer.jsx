@@ -26,7 +26,7 @@ const Footer = () => {
           <p className="mt-4 text-white">Subscribe to our newsletter for updates</p>
           <div className="mt-2 flex justify-center items-center">
             <input type="email" placeholder="Enter your email" className="bg-white px-4 py-2 rounded-l-md focus:outline-none focus:ring focus:border-blue-300 flex-1" />
-            <button className="bg-red-600 text-white px-6 py-2 rounded-r-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">Subscribe</button>
+            <button className="bg-green-600 text-white px-6 py-2 rounded-r-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">Subscribe</button>
           </div>
         </div>
       </div>
