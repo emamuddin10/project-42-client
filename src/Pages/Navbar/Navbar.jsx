@@ -26,8 +26,8 @@ const Navbar = () => {
       {
         user ? <>
         
+        <NavLink to="/dashboard/dashboard_profile" className="text-black font-bold hover:text-gray-400 block py-2">dashboard</NavLink>
         <button onClick={handleLogout} className="bg-green-600 text-white  px-4 py-2 rounded hover:bg-blue-600" >Logout</button>
-        <NavLink to="/dashboard/dashboard_profile" className="bg-green-600 text-white  px-4 py-2 rounded hover:bg-blue-600">dashboard</NavLink>
         </> :  
         <>
         <NavLink to="/login" className="bg-green-600 text-white  px-4 py-2 rounded hover:bg-blue-600">Login</NavLink>
