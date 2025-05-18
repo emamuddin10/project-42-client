@@ -7,7 +7,7 @@ const ApproveContactRequest = () => {
     useEffect(() => {
         const fetchContactRequests = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/contact-requests-info');
+                const response = await axios.get('https://project-42-server.onrender.com/contact-requests-info');
                 setContactRequests(response.data);
             } catch (error) {
                 console.error('Error fetching contact requests:', error);
@@ -19,7 +19,7 @@ const ApproveContactRequest = () => {
 
     const handleApprove = async (id) => {
         try {
-            await axios.patch(`http://localhost:5000/contact-requests-info/${id}`, { status: 'Approved' });
+            await axios.patch(`https://project-42-server.onrender.com/contact-requests-info/${id}`, { status: 'Approved' });
             setContactRequests(prevRequests =>
                 prevRequests.map(request =>
                     request._id === id ? { ...request, status: 'Approved' } : request

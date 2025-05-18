@@ -17,7 +17,7 @@ const ViewBiodata = () => {
 
     const fetchUserBiodata = async (email) => {
         try {
-            const response = await fetch(`http://localhost:5000/biodata/user/${email}`);
+            const response = await fetch(`https://project-42-server.onrender.com/biodata/user/${email}`);
             if (!response.ok) {
                 throw new Error('Failed to fetch user biodata');
             }
@@ -37,7 +37,7 @@ const ViewBiodata = () => {
     //             isPremium: false,
     //             status: 'Requested'
     //         };
-    //         const { data } = await axios.put(`http://localhost:5000/user`, currentUser);
+    //         const { data } = await axios.put(`https://project-42-server.onrender.com/user`, currentUser);
     //         if (data.modifiedCount > 0) {
     //             toast.success('Success! Wait for admin approval');
     //         } else {
@@ -58,8 +58,8 @@ const ViewBiodata = () => {
               status: 'Requested'
           };
   
-          await axios.put(`http://localhost:5000/user`, currentUser);
-          const { data } = await axios.post(`http://localhost:5000/premium-requests`, {
+          await axios.put(`https://project-42-server.onrender.com/user`, currentUser);
+          const { data } = await axios.post(`https://project-42-server.onrender.com/premium-requests`, {
               email: user?.email,
               biodata: {
                   type: biodata.type,

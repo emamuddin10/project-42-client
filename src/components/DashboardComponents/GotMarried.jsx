@@ -46,7 +46,7 @@ const GotMarried = () => {
     console.log(newMarriage);
 
     // send data to server
-    fetch('http://localhost:5000/marriage', {
+    fetch('https://project-42-server.onrender.com/marriage', {
         method: 'POST',
         headers: {
             'content-type' : 'application/json'

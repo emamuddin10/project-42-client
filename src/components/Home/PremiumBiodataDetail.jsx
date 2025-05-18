@@ -11,7 +11,7 @@ const PremiumBiodataDetail = () => {
     const fetchBiodataDetails = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/premium-requests/${id}`
+          `https://project-42-server.onrender.com/premium-requests/${id}`
         );
         setBiodata(response.data);
       } catch (error) {

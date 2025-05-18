@@ -13,7 +13,7 @@ const PremiumBiodatas = () => {
 
   const fetchPremiumBiodatas = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/premium-requests');
+      const response = await axios.get('https://project-42-server.onrender.com/premium-requests');
       const approvedBiodatas = response.data.filter(request => request.status === "Approved");
       setPremiumBiodatas(approvedBiodatas);
     } catch (error) {

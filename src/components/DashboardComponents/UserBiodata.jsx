@@ -74,7 +74,7 @@ const UserBiodata = () => {
       console.log(updatedBiodata);
   
       // send data to server
-      fetch(`http://localhost:5000/biodata/${biodata._id}`, {
+      fetch(`https://project-42-server.onrender.com/biodata/${biodata._id}`, {
           method: 'PUT',
           headers: {
               'content-type' : 'application/json'
@@ -115,7 +115,7 @@ const UserBiodata = () => {
 
     const fetchUserBiodata = async (email) => {
         try {
-            const response = await fetch(`http://localhost:5000/biodata/user/${email}`);
+            const response = await fetch(`https://project-42-server.onrender.com/biodata/user/${email}`);
             if (!response.ok) {
                 throw new Error('Failed to fetch user biodata');
             }

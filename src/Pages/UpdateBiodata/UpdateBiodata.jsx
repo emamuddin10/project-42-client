@@ -9,7 +9,7 @@ const UpdateBiodata = () => {
     const [existingBiodata, setExistingBiodata] = useState(null);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/biodata/user/${user.email}`)
+        fetch(`https://project-42-server.onrender.com/biodata/user/${user.email}`)
             .then(res => res.json())
             .then(data => {
                 setExistingBiodata(data);

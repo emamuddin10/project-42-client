@@ -60,7 +60,7 @@ const price = 5;
       console.error(error);
     } else {
       // Send paymentMethod.id to your server for processing
-    //   const response = await axios.post('http://localhost:5000/request-contact', {
+    //   const response = await axios.post('https://project-42-server.onrender.com/request-contact', {
     //     biodataId, // Pass biodataId to backend
     //     userEmail: user.email,
     //     paymentMethodId: paymentMethod.id,
@@ -94,7 +94,7 @@ const price = 5;
             console.log('transaction id', paymentIntent.id);
             setTransactionId(paymentIntent.id)
 
-            const info = await axios.get(`http://localhost:5000/info/${biodataId}`);
+            const info = await axios.get(`https://project-42-server.onrender.com/info/${biodataId}`);
             console.log(info.data.name);
             const name= info.data.name;
             const email= info.data.email;
@@ -105,7 +105,7 @@ const price = 5;
 
         
 
-            const response = await axios.post('http://localhost:5000/request-contact-info', {
+            const response = await axios.post('https://project-42-server.onrender.com/request-contact-info', {
                           biodataId, 
                           name,
                           email,
@@ -146,7 +146,7 @@ const price = 5;
 //         console.error(error);
 //       } else {
 //         // Payment successful, send request to backend to save biodata info
-//         const response = await axios.post('http://localhost:5000/request-contact', {
+//         const response = await axios.post('https://project-42-server.onrender.com/request-contact', {
 //           biodataId, // Assuming you have biodataId available
 //           userEmail: user.email,
 //           price: 5, // Assuming price is fixed for each request

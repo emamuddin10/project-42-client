@@ -61,7 +61,7 @@
 //             status: 'verified'
 //         }
 //         console.log(currentUser)
-//         const {data} = await axios.put(`http://localhost:5000/user`,currentUser )
+//         const {data} = await axios.put(`https://project-42-server.onrender.com/user`,currentUser )
 //         return data;
 //     }
 
@@ -154,7 +154,7 @@ const AuthProvider = ({ children }) => {
             status: 'verified'
         }
       
-        const {data} = await axios.put(`http://localhost:5000/user`,currentUser )
+        const {data} = await axios.put(`https://project-42-server.onrender.com/user`,currentUser )
              return data;
     }
 
